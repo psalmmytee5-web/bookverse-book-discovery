@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BookVerse | Book Discovery and Reading Tracker</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow sticky-top">
+
+            <div class="container">
+
+                <a class="navbar-brand fw-bold" href="index.html">
+
+                    <i class="bi bi-book-half"></i>
+                    BookVerse
+
+                </a>
+
+
+                <!-- Mobile menu -->
+
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+
+                <!-- Navigation -->
+
+                <div
+                    class="collapse navbar-collapse"
+                    id="navbarNav">
+
+                    <ul class="navbar-nav ms-auto">
+
+
+                        <li class="nav-item">
+
+                            <a
+                                class="nav-link active"
+                                href="index.html">
+
+                                Home
+
+                            </a>
+
+                        </li>
+
+
+                        <li class="nav-item">
+
+                            <a
+                                class="nav-link"
+                                href="favorites.html">
+
+                                Favorites
+
+                            </a>
+
+                        </li>
+
+
+                        <li class="nav-item">
+
+                            <a
+                                class="nav-link"
+                                href="tracker.html">
+
+                                Tracker
+
+                            </a>
+
+                        </li>
+
+
+                        <li class="nav-item">
+
+                            <a
+                                class="nav-link"
+                                href="about.html">
+
+                                About
+
+                            </a>
+
+                        </li>
+
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= HERO SECTION ================= -->
+
+    <section class="hero">
+
+        <div class="container text-center">
+
+
+            <div class="mb-3">
+
+                <span class="badge bg-primary px-3 py-2">
+
+                    <i class="bi bi-book-half me-1"></i>
+
+                    Book Discovery Platform
+
+                </span>
+
+            </div>
+
+
+            <h1 class="display-3 fw-bold">
+
+                Discover Your Next
+
+                <span class="text-primary">
+
+                    Favorite Book
+
+                </span>
+
+            </h1>
+
+
+            <p class="lead text-muted mb-5">
+
+                Search millions of books by title, author or subject
+                and find your next great read.
+
+            </p>
+
+
+            <!-- SEARCH -->
+
+            <div class="row justify-content-center">
+
+                <div class="col-md-9 col-lg-8">
+
+                    <div class="input-group input-group-lg search-box">
+
+
+                        <input
+                            type="text"
+                            id="searchInput"
+                            class="form-control"
+                            placeholder="Search by title, author or subject..."
+                            aria-label="Search books by title, author or subject">
+
+
+                        <button
+                            class="btn btn-primary px-4"
+                            id="searchBtn">
+
+                            <i class="bi bi-search me-2"></i>
+
+                            Search
+
+                        </button>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CATEGORIES ================= -->
+
+    <section class="categories py-5">
+
+        <div class="container text-center">
+
+
+            <h2 class="fw-bold mb-2">
+
+                Popular Categories
+
+            </h2>
+
+
+            <p class="text-muted mb-4">
+
+                Explore books by your favorite subjects.
+
+            </p>
+
+
+            <div class="category-buttons">
+
+
+                <button
+                    class="btn btn-light shadow-sm rounded-pill px-4 category-btn">
+
+                    📖 Fiction
+
+                </button>
+
+
+                <button
+                    class="btn btn-light shadow-sm rounded-pill px-4 category-btn">
+
+                    💕 Romance
+
+                </button>
+
+
+                <button
+                    class="btn btn-light shadow-sm rounded-pill px-4 category-btn">
+
+                    🔬 Science
+
+                </button>
+
+
+                <button
+                    class="btn btn-light shadow-sm rounded-pill px-4 category-btn">
+
+                    🏛️ History
+
+                </button>
+
+
+                <button
+                    class="btn btn-light shadow-sm rounded-pill px-4 category-btn">
+
+                    🧙 Fantasy
+
+                </button>
+
+
+                <button
+                    class="btn btn-light shadow-sm rounded-pill px-4 category-btn">
+
+                    💻 Programming
+
+                </button>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= BOOK RESULTS ================= -->
+
+    <section class="container py-5">
+
+
+        <div class="text-center mb-4">
+
+            <h2 class="fw-bold">
+
+                Search Results
+
+            </h2>
+
+
+            <p
+                id="resultsMessage"
+                class="text-muted">
+
+                Search for a book to discover your next great read.
+
+            </p>
+
+        </div>
+
+
+        <!-- Books are inserted here by app.js -->
+
+        <div
+            class="row g-4"
+            id="bookContainer">
+
+        </div>
+
+
+    </section>
+
+
+    <!-- ================= LOADING ================= -->
+
+    <div
+        id="loadingSpinner"
+        class="text-center my-5"
+        style="display: none;">
+
+        <div
+            class="spinner-border text-primary"
+            role="status">
+
+            <span class="visually-hidden">
+
+                Loading...
+
+            </span>
+
+        </div>
+
+
+        <p class="mt-3 text-muted">
+
+            Finding books for you...
+
+        </p>
+
+    </div>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="text-center text-white py-4">
+
+
+        <h4>
+
+            📚 BookVerse
+
+        </h4>
+
+
+        <p>
+
+            Discover, Read and Track Your Favorite Books.
+
+        </p>
+
+
+        <small>
+
+            &copy; 2026 BookVerse. All Rights Reserved.
+
+        </small>
+
+
+    </footer>
+
+
+    <!-- ================= FAVORITE TOAST ================= -->
+
+    <div
+        class="toast-container position-fixed top-0 end-0 p-3">
+
+
+        <div
+            id="favoriteToast"
+            class="toast align-items-center text-bg-success border-0"
+            role="alert">
+
+
+            <div class="d-flex">
+
+
+                <div class="toast-body">
+
+                    <i class="bi bi-check-circle-fill me-2"></i>
+
+                    Book added to Favorites!
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="btn-close btn-close-white me-2 m-auto"
+                    data-bs-dismiss="toast"
+                    aria-label="Close">
+
+                </button>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="js/app.js"></script>
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+</body>
+
+</html>

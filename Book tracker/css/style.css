@@ -1,0 +1,620 @@
+/* =========================================================
+   BOOKVERSE - FINAL WEBSITE STYLES
+   ========================================================= */
+
+/* ================= GENERAL ================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f8f9fc;
+    color: #17233c;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+.navbar {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+.navbar-brand {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.navbar .nav-link {
+    font-weight: 500;
+    margin-left: 8px;
+    transition: all 0.25s ease;
+}
+
+.navbar .nav-link:hover {
+    opacity: 0.8;
+    transform: translateY(-1px);
+}
+
+.navbar .nav-link.active {
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   HOME PAGE
+   ========================================================= */
+
+/* Main Home hero */
+
+.hero {
+    position: relative;
+    min-height: 430px;
+
+    display: flex;
+    align-items: center;
+
+    background-image:
+        linear-gradient(
+            rgba(10, 25, 47, 0.72),
+            rgba(10, 25, 47, 0.72)
+        ),
+        url("../images/home-bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: white;
+}
+
+.hero h1 {
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    line-height: 1.15;
+    color: white;
+}
+
+.hero h1 .text-primary {
+    color: #4da3ff !important;
+}
+
+.hero p {
+    color: rgba(255, 255, 255, 0.88) !important;
+}
+
+.hero .badge {
+    font-weight: 500;
+    border-radius: 20px;
+}
+
+.hero .input-group {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.hero .form-control {
+    border: none;
+    padding: 16px 20px;
+}
+
+.hero .form-control:focus {
+    box-shadow: none;
+}
+
+.hero .btn-primary {
+    padding-left: 28px;
+    padding-right: 28px;
+}
+
+
+/* =========================================================
+   CATEGORIES
+   ========================================================= */
+
+.categories {
+    padding: 45px 20px 35px;
+    text-align: center;
+    background: #ffffff;
+}
+
+.categories h2 {
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.category-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.category-btn {
+    border: none;
+    transition: all 0.25s ease;
+}
+
+.category-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12) !important;
+}
+
+
+/* =========================================================
+   SEARCH RESULTS
+   ========================================================= */
+
+#bookContainer {
+    padding-bottom: 30px;
+}
+
+#bookContainer .card {
+    border: none;
+    border-radius: 14px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background: #ffffff;
+}
+
+#bookContainer .card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12) !important;
+}
+
+#bookContainer .card-img-top {
+    transition: transform 0.3s ease;
+}
+
+#bookContainer .card:hover .card-img-top {
+    transform: scale(1.02);
+}
+
+#bookContainer .card-title {
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+#bookContainer .text-muted {
+    font-size: 0.9rem;
+}
+
+
+/* =========================================================
+   FAVORITES PAGE
+   ========================================================= */
+
+.favorites-hero {
+    position: relative;
+    min-height: 320px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-image:
+        linear-gradient(
+            rgba(10, 25, 47, 0.70),
+            rgba(10, 25, 47, 0.70)
+        ),
+        url("../images/favorites-bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: white;
+}
+
+.favorites-hero h1 {
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    color: white;
+}
+
+.favorites-hero p {
+    color: rgba(255, 255, 255, 0.88) !important;
+}
+
+.favorites-hero .badge {
+    border-radius: 20px;
+}
+
+
+/* Favorite cards */
+
+#favoritesContainer .card {
+    border: none;
+    border-radius: 14px;
+    overflow: hidden;
+    background: white;
+    transition: all 0.3s ease;
+}
+
+#favoritesContainer .card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12) !important;
+}
+
+#favoritesContainer .card img {
+    object-fit: cover;
+}
+
+#favoritesContainer .card h5 {
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   TRACKER PAGE
+   ========================================================= */
+
+/*
+   Your current tracker.html does not have a tracker hero
+   section. This makes the heading area at the top of the
+   tracker page look like a hero using the tracker image.
+*/
+
+body:has(#trackerContainer) {
+    background: #f8f9fc;
+}
+
+
+/* Tracker heading area */
+
+body:has(#trackerContainer) > .container:first-of-type {
+    position: relative;
+
+    max-width: 100% !important;
+
+    margin: 0 !important;
+    padding: 75px 20px;
+
+    text-align: center;
+
+    background-image:
+        linear-gradient(
+            rgba(10, 25, 47, 0.70),
+            rgba(10, 25, 47, 0.70)
+        ),
+        url("../images/tracker-bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: white;
+}
+
+body:has(#trackerContainer) > .container:first-of-type h2 {
+    margin: 0 !important;
+    color: white;
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+
+/* Tracker statistics */
+
+body:has(#trackerContainer) .row.text-center {
+    max-width: 1200px;
+    margin: 40px auto !important;
+    padding: 0 15px;
+}
+
+body:has(#trackerContainer) .row.text-center .card {
+    border: none;
+    border-radius: 14px;
+    transition: all 0.25s ease;
+}
+
+body:has(#trackerContainer) .row.text-center .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.10) !important;
+}
+
+#wantCount,
+#readingCount,
+#completedCount {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+
+/* Tracker books */
+
+#trackerContainer {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 15px 50px;
+}
+
+#trackerContainer .card {
+    border: none;
+    border-radius: 14px;
+    overflow: hidden;
+    background: white;
+    transition: all 0.3s ease;
+}
+
+#trackerContainer .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+#trackerContainer .card-img-top {
+    object-fit: cover;
+}
+
+#trackerContainer .card-title {
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+#trackerContainer .form-select {
+    border-radius: 8px;
+}
+
+#trackerContainer input[type="range"] {
+    width: 100%;
+    accent-color: #0d6efd;
+}
+
+
+/* =========================================================
+   ABOUT PAGE
+   ========================================================= */
+
+.about-hero {
+    position: relative;
+    min-height: 320px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-image:
+        linear-gradient(
+            rgba(10, 25, 47, 0.70),
+            rgba(10, 25, 47, 0.70)
+        ),
+        url("../images/about-bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: white;
+}
+
+.about-hero h1 {
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    color: white;
+}
+
+.about-hero p {
+    color: rgba(255, 255, 255, 0.88);
+}
+
+.about-hero .badge {
+    border-radius: 20px;
+}
+
+
+/* =========================================================
+   ABOUT PAGE CONTENT
+   ========================================================= */
+
+.about-section {
+    padding: 70px 20px;
+    background: #ffffff;
+}
+
+.about-section h2 {
+    font-weight: 700;
+}
+
+.about-section p {
+    line-height: 1.8;
+    color: #5f6b7a;
+}
+
+
+/* About cards */
+
+.about-card {
+    height: 100%;
+    padding: 30px;
+    border-radius: 15px;
+    background: white;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-5px);
+}
+
+.about-card i {
+    font-size: 2rem;
+    color: #0d6efd;
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.btn {
+    border-radius: 8px;
+    transition: all 0.25s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+}
+
+.btn-danger:hover {
+    transform: translateY(-2px);
+}
+
+.btn-success:hover {
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   LOADING
+   ========================================================= */
+
+.loading {
+    text-align: center;
+    padding: 50px;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+
+    margin: auto;
+
+    border: 4px solid #e5e7eb;
+    border-top: 4px solid #0d6efd;
+
+    border-radius: 50%;
+
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+    background: #17233c;
+    color: white;
+    text-align: center;
+    padding: 45px 20px;
+    margin-top: 40px;
+}
+
+footer h3,
+footer h4 {
+    font-weight: 600;
+}
+
+footer p {
+    color: rgba(255, 255, 255, 0.80);
+}
+
+footer small {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+
+/* =========================================================
+   MOBILE RESPONSIVENESS
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .hero {
+        min-height: 400px;
+        padding: 60px 15px !important;
+    }
+
+    .hero h1 {
+        font-size: 2.3rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .category-buttons {
+        gap: 8px;
+    }
+
+    .category-btn {
+        font-size: 0.9rem;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+
+    .favorites-hero {
+        min-height: 270px;
+        padding: 50px 15px;
+    }
+
+    .about-hero {
+        min-height: 270px;
+        padding: 50px 15px;
+    }
+
+    body:has(#trackerContainer) > .container:first-of-type {
+        padding: 55px 15px;
+    }
+
+    body:has(#trackerContainer) > .container:first-of-type h2 {
+        font-size: 2.2rem;
+    }
+
+    body:has(#trackerContainer) .row.text-center {
+        margin-top: 25px !important;
+    }
+
+}
+
+
+/* =========================================================
+   EXTRA SMALL SCREENS
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero .input-group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero .form-control {
+        border-radius: 8px !important;
+        margin-bottom: 8px;
+    }
+
+    .hero .btn {
+        border-radius: 8px !important;
+    }
+
+    .favorites-hero h1,
+    .about-hero h1 {
+        font-size: 2rem;
+    }
+
+}

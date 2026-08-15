@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Reading Tracker | BookVerse</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow sticky-top">
+
+        <div class="container">
+
+            <a class="navbar-brand fw-bold" href="index.html">
+
+                <i class="bi bi-book-half"></i>
+                BookVerse
+
+            </a>
+
+
+            <!-- Mobile Menu Button -->
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+
+            <!-- Navigation Links -->
+
+            <div
+                class="collapse navbar-collapse"
+                id="navbarNav">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="index.html">
+
+                            Home
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="favorites.html">
+
+                            Favorites
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link active"
+                            href="tracker.html">
+
+                            Tracker
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="about.html">
+
+                            About
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ================= TRACKER HERO ================= -->
+
+    <section class="tracker-hero">
+
+        <div class="container text-center">
+
+            <span class="badge bg-primary px-3 py-2 mb-3">
+
+                📖 Your Reading Journey
+
+            </span>
+
+
+            <h1 class="fw-bold">
+
+                My Reading Tracker
+
+            </h1>
+
+
+            <p class="text-muted">
+
+                Keep track of the books you want to read,
+                are currently reading, and have completed.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="container py-5">
+
+
+        <!-- ================= STATISTICS ================= -->
+
+        <div class="row g-4 mb-5">
+
+
+            <!-- Want to Read -->
+
+            <div class="col-md-4">
+
+                <div class="tracker-stat-card">
+
+                    <div class="tracker-stat-icon want-icon">
+
+                        <i class="bi bi-book"></i>
+
+                    </div>
+
+                    <div>
+
+                        <p class="tracker-stat-title">
+
+                            Want to Read
+
+                        </p>
+
+                        <h2 id="wantCount">
+
+                            0
+
+                        </h2>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Currently Reading -->
+
+            <div class="col-md-4">
+
+                <div class="tracker-stat-card">
+
+                    <div class="tracker-stat-icon reading-icon">
+
+                        <i class="bi bi-book-half"></i>
+
+                    </div>
+
+                    <div>
+
+                        <p class="tracker-stat-title">
+
+                            Currently Reading
+
+                        </p>
+
+                        <h2 id="readingCount">
+
+                            0
+
+                        </h2>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Completed -->
+
+            <div class="col-md-4">
+
+                <div class="tracker-stat-card">
+
+                    <div class="tracker-stat-icon completed-icon">
+
+                        <i class="bi bi-check-circle-fill"></i>
+
+                    </div>
+
+                    <div>
+
+                        <p class="tracker-stat-title">
+
+                            Completed
+
+                        </p>
+
+                        <h2 id="completedCount">
+
+                            0
+
+                        </h2>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- ================= MY BOOKS ================= -->
+
+        <div class="d-flex justify-content-between align-items-center mb-4">
+
+            <div>
+
+                <h2 class="fw-bold mb-1">
+
+                    📚 My Books
+
+                </h2>
+
+                <p class="text-muted mb-0">
+
+                    Manage your reading progress.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= BOOKS ================= -->
+
+        <div
+            id="trackerContainer"
+            class="row g-4">
+
+        </div>
+
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="text-center text-white py-4">
+
+        <h4>
+
+            📚 BookVerse
+
+        </h4>
+
+
+        <p>
+
+            Discover, Read and Track Your Favorite Books.
+
+        </p>
+
+
+        <small>
+
+            &copy; 2026 BookVerse. All Rights Reserved.
+
+        </small>
+
+    </footer>
+
+
+    <!-- ================= BOOTSTRAP JS ================= -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+    <!-- ================= TRACKER JS ================= -->
+
+    <script src="js/tracker.js"></script>
+
+
+</body>
+
+</html>
